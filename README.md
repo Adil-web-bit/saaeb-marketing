@@ -1,39 +1,33 @@
-# NEXORA - Modern SaaS Dashboard
+# SAAEB - Medical Insurance Revenue Cycle Management Platform
 
 <div align="center">
   
-  **A production-ready, feature-rich SaaS dashboard built with React, TypeScript, and modern web technologies.**
+  **The smart tech shield protecting medical facility's revenue cycle with AI-powered claim auditing and insurance intelligence.**
 
-  Enterprise-level frontend showcasing best practices in modern web development.
+  Enterprise-level frontend for healthcare revenue optimization and claim management.
 </div>
 
 ---
 
 ## 📋 Overview
 
-NEXORA is a comprehensive SaaS dashboard application demonstrating production-ready frontend development. It features complete authentication flows, responsive design, dark/light theme support, professional animations with Framer Motion, and a rich set of interactive dashboard widgets.
+SAAEB is a comprehensive platform protecting medical facilities' revenue cycle. It features claim auditing, insurance rule intelligence, dark/light theme support, professional animations with Framer Motion, and multi-language support (English/Arabic) for healthcare professionals.
 
-This project showcases enterprise-level code quality, accessibility best practices, error handling, and a polished user experience suitable for modern SaaS applications.
+This project showcases enterprise-level code quality, accessibility best practices, error handling, and a polished user experience suitable for modern healthcare technology applications.
 
 ---
 
 ## ✨ Features
 
-### 🎨 **Design & UX**
-- **Dual Theme System** - Seamless light/dark mode with persistent localStorage preferences
-- **Fully Responsive** - Optimized layouts for mobile (< 768px), tablet (768px-1024px), and desktop (> 1024px)
-- **Professional Animations** - Smooth page transitions, micro-interactions, and stagger effects using Framer Motion
-- **Custom Design System** - Comprehensive theme with colors, typography, spacing, shadows, and transitions
-- **Consistent Visual Language** - Unified component library with standardized styling
+### � **Core Features**
+- **Intelligent Claim Auditing** - AI-powered analysis to detect financial bleeding and optimize revenue
+- **Insurance Rule Engine** - Advanced logic to prevent partial approvals and ensure full claim payment
+- **Multi-Language Support** - Full Arabic and English translations for MENA healthcare professionals
+- **Real-Time Synchronization** - Seamless integration with HIS (Hospital Information Systems) and NPHIES
+- **Enterprise Security** - PDPL-compliant data protection with 100% Saudi data sovereignty
+- **Professional Animations** - Smooth page transitions and micro-interactions with Framer Motion
 
-### 🔐 **Authentication**
-- Login and Signup pages with form validation
-- Protected routes with authentication context
-- Persistent authentication state
-- Password visibility toggle
-- Form error handling with animations
-
-### 📊 **Dashboard Components**
+### 🏥 **Healthcare-Specific Components**
 - **Stats Cards** - Key metrics with trend indicators, icons, and hover animations
 - **Interactive Charts** - Line charts, bar charts, and area charts powered by Recharts
 - **Data Tables** - Sortable, paginated tables with row hover effects and stagger animations
@@ -109,8 +103,8 @@ This project showcases enterprise-level code quality, accessibility best practic
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/nexora-frontend.git
-   cd nexora-frontend
+   git clone https://github.com/Adil-web-bit/saaeb-marketing.git
+   cd saaeb-marketing
    ```
 
 2. **Install dependencies**
@@ -151,7 +145,7 @@ npm run lint
 ## 📂 Project Structure
 
 ```
-nexora-frontend/
+saaeb-marketing/
 ├── public/                    # Static assets
 ├── src/
 │   ├── components/            # Reusable components
@@ -160,39 +154,31 @@ nexora-frontend/
 │   │   ├── feedback/          # Error boundaries, empty states
 │   │   ├── forms/             # Form components (Button, Input, Checkbox, Toggle)
 │   │   ├── navigation/        # Navbar, Footer
-│   │   ├── theme/             # Theme toggle component
-│   │   └── widgets/           # Dashboard widgets (StatsCard, DataTable, Charts)
+│   │   ├── theme/             # Theme toggle, Language toggle
+│   │   └── widgets/           # Dashboard widgets (StatsCard, DataTable, Charts, TestimonialsCarousel)
 │   ├── config/                # Configuration files
 │   │   ├── router.tsx         # React Router configuration
 │   │   └── theme.ts           # Global theme tokens and design system
 │   ├── contexts/              # React contexts
-│   │   ├── AuthContext.tsx    # Authentication state management
-│   │   └── ThemeContext.tsx   # Theme state management
+│   │   ├── LanguageContext.tsx    # Multi-language support (EN/AR)
+│   │   └── ThemeContext.tsx       # Theme state management
 │   ├── layouts/               # Layout components
-│   │   ├── DashboardLayout.tsx  # Authenticated pages layout
-│   │   └── PublicLayout.tsx     # Public pages layout
+│   │   ├── DashboardLayout.tsx  # Dashboard pages layout
+│   │   └── PublicLayout.tsx     # Marketing/public pages layout
 │   ├── pages/                 # Page components
-│   │   ├── HomePage.tsx
-│   │   ├── FeaturesPage.tsx
-│   │   ├── PricingPage.tsx
-│   │   ├── LoginPage.tsx
-│   │   ├── SignupPage.tsx
-│   │   ├── DashboardPage.tsx
-│   │   ├── AnalyticsPage.tsx
-│   │   ├── ProjectsPage.tsx
-│   │   ├── TasksPage.tsx
-│   │   ├── SettingsPage.tsx
-│   │   ├── ProfilePage.tsx
-│   │   └── NotFoundPage.tsx
+│   │   ├── HomePage.tsx       # Marketing home with features & testimonials
+│   │   ├── FeaturesPage.tsx   # Security & compliance features
+│   │   ├── PricingPage.tsx    # Pricing plans (Success-fee model)
+│   │   └── NotFoundPage.tsx   # 404 error page
 │   ├── utils/                 # Utility functions
-│   │   └── animations.ts      # Framer Motion animation variants
+│   │   ├── animations.ts      # Framer Motion animation variants
+│   │   └── translations.ts    # Multi-language translations (EN/AR)
 │   ├── App.tsx                # Root component with router
 │   ├── main.tsx               # Application entry point
 │   └── index.css              # Global styles and CSS reset
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
-├── ARCHITECTURE.md            # Detailed architecture documentation
 └── README.md
 ```
 
