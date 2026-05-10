@@ -124,7 +124,7 @@ export const PricingPage = () => {
 
                                 <div style={{ marginBottom: theme.spacing[6] }}>
                                     <span style={{
-                                        fontSize: theme.typography.fontSize['5xl'],
+                                        fontSize: theme.typography.fontSize['3xl'],
                                         fontWeight: theme.typography.fontWeight.bold,
                                         color: plan.highlighted ? theme.colors.text.inverse : theme.colors.text.primary,
                                     }}>
@@ -161,7 +161,7 @@ export const PricingPage = () => {
                                 </ul>
 
                                 <Link
-                                    to="/signup"
+                                    to="/"
                                     style={{
                                         display: 'block',
                                         padding: `${theme.spacing[3]} ${theme.spacing[6]}`,
@@ -174,7 +174,7 @@ export const PricingPage = () => {
                                         transition: `all ${theme.transitions.duration.base}`,
                                     }}
                                 >
-                                    {t('pricing.cta')}
+                                    Request Private Access
                                 </Link>
                             </motion.div>
                         ))}

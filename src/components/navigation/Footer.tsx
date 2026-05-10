@@ -8,43 +8,15 @@ import { useTheme } from '../../contexts/ThemeContext';
 
 export const Footer = () => {
     const { theme } = useTheme();
-    const currentYear = new Date().getFullYear();
 
+    // Only the three client-requested footer links
     const footerSections = [
-        {
-            title: 'Product',
-            links: [
-                { label: 'Features', path: '/features' },
-                { label: 'Pricing', path: '/pricing' },
-                { label: 'Security', path: '#' },
-                { label: 'Roadmap', path: '#' },
-            ],
-        },
-        {
-            title: 'Company',
-            links: [
-                { label: 'About', path: '#' },
-                { label: 'Blog', path: '#' },
-                { label: 'Careers', path: '#' },
-                { label: 'Contact', path: '#' },
-            ],
-        },
-        {
-            title: 'Resources',
-            links: [
-                { label: 'Documentation', path: '#' },
-                { label: 'Help Center', path: '#' },
-                { label: 'API Reference', path: '#' },
-                { label: 'Community', path: '#' },
-            ],
-        },
         {
             title: 'Legal',
             links: [
-                { label: 'Privacy Policy', path: '#' },
-                { label: 'Terms of Service', path: '#' },
-                { label: 'Cookie Policy', path: '#' },
-                { label: 'GDPR', path: '#' },
+                { label: 'Privacy Policy', path: '/privacy' },
+                { label: 'Terms of Service', path: '/terms' },
+                { label: 'Contact Us', path: '/contact' },
             ],
         },
     ];
@@ -116,15 +88,7 @@ export const Footer = () => {
                 >
                     {/* Brand Section */}
                     <div style={{ gridColumn: 'span 1' }}>
-                        <img
-                            src="/nexora-logo.png"
-                            alt="NEXORA"
-                            style={{
-                                height: '36px',
-                                width: 'auto',
-                                marginBottom: theme.spacing[4],
-                            }}
-                        />
+                        <div className="logo-badge logo-badge--small" style={{ marginBottom: theme.spacing[4], backgroundImage: "url('/website-logo.png')" }} />
                         <p
                             style={{
                                 color: theme.colors.neutral[400],
@@ -133,7 +97,7 @@ export const Footer = () => {
                                 marginBottom: theme.spacing[6],
                             }}
                         >
-                            Enterprise-grade SaaS platform empowering modern businesses to scale and succeed.
+                            The smart tech shield protecting revenue cycles and ensuring medical compliance for healthcare facilities in Saudi Arabia.
                         </p>
                         {/* Social Links */}
                         <div style={{ display: 'flex', gap: theme.spacing[4] }}>
@@ -159,7 +123,7 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Footer Links Sections */}
+                    {/* Only client-approved legal/contact links */}
                     {footerSections.map((section) => (
                         <div key={section.title}>
                             <h4
@@ -220,7 +184,7 @@ export const Footer = () => {
                             margin: 0,
                         }}
                     >
-                        © {currentYear} NEXORA. All rights reserved.
+                        © 2025 SAAEB
                     </p>
                     <div style={{ display: 'flex', gap: theme.spacing[6] }}>
                         <Link

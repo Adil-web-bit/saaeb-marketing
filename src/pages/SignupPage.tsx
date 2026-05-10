@@ -138,14 +138,7 @@ export const SignupPage = () => {
                     <div style={{ textAlign: 'center', marginBottom: theme.spacing[8] }}>
                         {/* Logo */}
                         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: theme.spacing[4] }}>
-                            <img
-                                src="/nexora-logo.png"
-                                alt="NEXORA"
-                                style={{
-                                    height: '48px',
-                                    width: 'auto',
-                                }}
-                            />
+                            <div className="logo-badge logo-badge--large" style={{ backgroundImage: "url('/website-logo.png')" }} />
                         </div>
 
                         <h1
@@ -495,8 +488,6 @@ export const SignupPage = () => {
                             {isLoading ? (
                                 <>
                                     <svg
-                                        width="20"
-                                        height="20"
                                         viewBox="0 0 20 20"
                                         fill="none"
                                         style={{ animation: 'spin 1s linear infinite' }}

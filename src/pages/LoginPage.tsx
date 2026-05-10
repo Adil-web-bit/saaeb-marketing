@@ -97,14 +97,7 @@ export const LoginPage = () => {
                     <motion.div variants={staggerItemOnScroll} style={{ textAlign: 'center', marginBottom: theme.spacing[8] }}>
                         {/* Logo */}
                         <motion.div style={{ display: 'flex', justifyContent: 'center', marginBottom: theme.spacing[4] }}>
-                            <img
-                                src="/nexora-logo.png"
-                                alt="NEXORA"
-                                style={{
-                                    height: '48px',
-                                    width: 'auto',
-                                }}
-                            />
+                            <div className="logo-badge logo-badge--large" style={{ backgroundImage: "url('/website-logo.png')" }} />
                         </motion.div>
 
                         <motion.h1
@@ -309,8 +302,6 @@ export const LoginPage = () => {
                             {isLoading ? (
                                 <>
                                     <svg
-                                        width="20"
-                                        height="20"
                                         viewBox="0 0 20 20"
                                         fill="none"
                                         style={{ animation: 'spin 1s linear infinite' }}
@@ -368,7 +359,7 @@ export const LoginPage = () => {
                     >
                         {t('auth.login.noAccount')}{' '}
                         <Link
-                            to="/signup"
+                                to="/"
                             style={{
                                 color: theme.colors.primary[500],
                                 textDecoration: 'none',

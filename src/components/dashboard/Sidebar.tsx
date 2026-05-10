@@ -139,14 +139,7 @@ export const Sidebar = ({ isCollapsed, onToggle, isMobileOpen, onMobileClose }: 
                     }}
                 >
                     {!isCollapsed && (
-                        <img
-                            src="/nexora-logo.png"
-                            alt="NEXORA"
-                            style={{
-                                height: '36px',
-                                width: 'auto',
-                            }}
-                        />
+                            <div className="logo-badge logo-badge--small" style={{ backgroundImage: "url('/website-logo.png')" }} />
                     )}
 
                     {/* Toggle Button */}

@@ -14,7 +14,6 @@ import {
     heroHeading,
     heroSubtitle,
     heroCTA,
-    counterVariants,
     staggerContainerOnScroll,
     staggerItemOnScroll,
     buttonGlow,
@@ -29,12 +28,6 @@ export const HomePage = () => {
     const features = t('home.features');
     const steps = t('home.howSteps');
     const testimonials = t('home.testimonials');
-    const stats = [
-        { value: '50K+', label: t('home.stats.users') },
-        { value: '99.9%', label: t('home.stats.uptime') },
-        { value: '150+', label: t('home.stats.countries') },
-        { value: '4.9/5', label: t('home.stats.rating') },
-    ];
 
     return (
         <AnimatedPage>
@@ -120,18 +113,10 @@ export const HomePage = () => {
                                 lineHeight: theme.typography.lineHeight.tight,
                                 color: theme.colors.text.primary,
                                 marginBottom: theme.spacing[6],
-                                fontFamily: theme.typography.fontFamily.secondary,
+                                fontFamily: "'29LT Bukra', 'Poppins', sans-serif",
                             }}
                         >
                             {t('home.headline')}
-                            {' '}
-                            <span
-                                style={{
-                                    color: theme.colors.primary[500],
-                                }}
-                            >
-                                NEXORA
-                            </span>
                         </motion.h1>
 
                         {/* Subtext */}
@@ -169,7 +154,7 @@ export const HomePage = () => {
                                 whileTap={{ scale: 0.95 }}
                             >
                                 <Link
-                                    to="/signup"
+                                    to="/"
                                     style={{
                                         padding: `${theme.spacing[4]} ${theme.spacing[8]}`,
                                         background: `linear-gradient(135deg, ${theme.colors.primary[500]} 0%, ${theme.colors.secondary[500]} 100%)`,
@@ -229,60 +214,6 @@ export const HomePage = () => {
                             {t('home.ctaNote')}
                         </p>
                     </div>
-
-                    {/* Stats Bar */}
-                    <motion.div
-                        style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-                            gap: theme.spacing[8],
-                            marginTop: theme.spacing[16],
-                            padding: theme.spacing[8],
-                            backgroundColor: theme.colors.background.default,
-                            borderRadius: theme.borderRadius['2xl'],
-                            boxShadow: theme.shadows.xl,
-                        }}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        {stats.map((stat, index) => (
-                            <motion.div
-                                key={index}
-                                style={{ textAlign: 'center' }}
-                                variants={counterVariants}
-                                initial="initial"
-                                whileInView="animate"
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                            >
-                                <motion.div
-                                    style={{
-                                        fontSize: theme.typography.fontSize['4xl'],
-                                        fontWeight: theme.typography.fontWeight.bold,
-                                        color: theme.colors.primary[600],
-                                        marginBottom: theme.spacing[2],
-                                    }}
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.1 + 0.2 }}
-                                >
-                                    {stat.value}
-                                </motion.div>
-                                <div
-                                    style={{
-                                        fontSize: theme.typography.fontSize.sm,
-                                        color: theme.colors.text.secondary,
-                                        fontWeight: theme.typography.fontWeight.medium,
-                                    }}
-                                >
-                                    {stat.label}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
                 </div>
 
                 {/* Pulse Animation */}
@@ -440,9 +371,10 @@ export const HomePage = () => {
                     {/* Steps */}
                     <motion.div
                         style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                            display: 'flex',
                             gap: theme.spacing[8],
+                            justifyContent: 'center',
+                            flexWrap: 'wrap',
                         }}
                         initial="initial"
                         whileInView="animate"
@@ -453,6 +385,7 @@ export const HomePage = () => {
                             <motion.div
                                 key={index}
                                 style={{
+                                    width: '360px',
                                     position: 'relative',
                                     padding: theme.spacing[8],
                                     backgroundColor: theme.colors.background.default,
@@ -473,7 +406,7 @@ export const HomePage = () => {
                                         position: 'absolute',
                                         top: theme.spacing[6],
                                         right: theme.spacing[6],
-                                        fontSize: theme.typography.fontSize['5xl'],
+                                        fontSize: theme.typography.fontSize['4xl'],
                                         fontWeight: theme.typography.fontWeight.bold,
                                         color: theme.colors.primary[100],
                                         fontFamily: theme.typography.fontFamily.secondary,
@@ -552,14 +485,37 @@ export const HomePage = () => {
                         </motion.p>
                     </motion.div>
 
-                    {/* Testimonials Carousel with Auto-Rotation */}
+                    {/* Integration Options (static) + Testimonials Carousel */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <TestimonialsCarousel testimonials={testimonials} autoRotateInterval={5000} />
+                        {/* Extract Option 1 & Option 2 as static side-by-side cards */}
+                        {(() => {
+                            const integrationOptions = (testimonials || []).filter((ti: any) => ti.variant === 'integration');
+                            const remainingTestimonials = (testimonials || []).filter((ti: any) => ti.variant !== 'integration');
+                            return (
+                                <div>
+                                    {integrationOptions.length > 0 && (
+                                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(280px, 1fr))', gap: theme.spacing[6], marginBottom: theme.spacing[8] }}>
+                                            {integrationOptions.map((opt: any, idx: any) => (
+                                                <div key={idx} style={{ padding: theme.spacing[6], borderRadius: theme.borderRadius['2xl'], backgroundColor: theme.colors.background.paper, border: `1px solid ${theme.colors.neutral[200]}` }}>
+                                                    <div style={{ fontSize: theme.typography.fontSize['3xl'], marginBottom: theme.spacing[2] }}>{opt.avatar}</div>
+                                                    <h4 style={{ fontSize: theme.typography.fontSize.xl, fontWeight: theme.typography.fontWeight.semibold, marginBottom: theme.spacing[2] }}>{opt.author}</h4>
+                                                    <p style={{ color: theme.colors.text.secondary }}>{opt.quote}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {remainingTestimonials.length > 0 && (
+                                        <TestimonialsCarousel testimonials={remainingTestimonials} autoRotateInterval={5000} />
+                                    )}
+                                </div>
+                            );
+                        })()}
                     </motion.div>
                 </div>
             </section>
@@ -657,7 +613,7 @@ export const HomePage = () => {
                                 }}
                             />
                             <Link
-                                to="/signup"
+                                to="/"
                                 style={{
                                     padding: `${theme.spacing[4]} ${theme.spacing[8]}`,
                                     backgroundColor: theme.colors.background.default,
@@ -679,45 +635,7 @@ export const HomePage = () => {
                                 <span>→</span>
                             </Link>
                         </motion.div>
-                        <motion.div
-                            whileHover={{ scale: 1.05, y: -4 }}
-                            whileTap={{ scale: 0.95 }}
-                            style={{ position: 'relative' }}
-                        >
-                            <motion.div
-                                variants={shimmerVariants}
-                                animate="animate"
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                    background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%)',
-                                    backgroundSize: '200% center',
-                                    borderRadius: theme.borderRadius.xl,
-                                    pointerEvents: 'none',
-                                }}
-                            />
-                            <Link
-                                to="/pricing"
-                                style={{
-                                    padding: `${theme.spacing[4]} ${theme.spacing[8]}`,
-                                    backgroundColor: 'transparent',
-                                    color: theme.colors.text.inverse,
-                                    textDecoration: 'none',
-                                    borderRadius: theme.borderRadius.xl,
-                                    fontWeight: theme.typography.fontWeight.semibold,
-                                    fontSize: theme.typography.fontSize.lg,
-                                    border: `2px solid ${theme.colors.text.inverse}`,
-                                    transition: `all ${theme.transitions.duration.base}`,
-                                    position: 'relative',
-                                    overflow: 'hidden',
-                                }}
-                            >
-                                {t('nav.pricing')}
-                            </Link>
-                        </motion.div>
+                        {/* Removed Pricing button per client request */}
                     </motion.div>
 
                     <p

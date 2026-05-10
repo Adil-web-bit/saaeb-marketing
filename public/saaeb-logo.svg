@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" role="img" aria-labelledby="title desc">
+  <title id="title">SAAEB Logo</title>
+  <desc id="desc">SAAEB wordmark logo</desc>
+  <defs>
+    <linearGradient id="saaebGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0078D4" />
+      <stop offset="100%" stop-color="#00A3A3" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="6" width="50" height="44" rx="10" fill="url(#saaebGradient)" />
+  <path d="M17 34c1.8 2.4 4.1 3.6 6.9 3.6 2.4 0 4-.9 4-2.6 0-1.5-1.1-2.3-3.6-3l-3.2-.9c-4.7-1.4-7.2-3.9-7.2-8 0-5 4.1-8.4 10.1-8.4 4.7 0 8.3 1.9 10.3 5.4l-4.3 2.9c-1.3-2-3.2-3-5.8-3-2.2 0-3.7 1-3.7 2.6 0 1.4 1 2.2 3.6 2.9l3.3 1c5 1.5 7.2 4 7.2 8.1 0 5.2-4.1 8.5-10.4 8.5-5.5 0-9.7-2.3-11.8-6.5z" fill="#ffffff"/>
+  <text x="64" y="37" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="2" fill="#0E2A47">SAAEB</text>
+</svg>

@@ -34,11 +34,19 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
     const t = (key: string): any => {
         const keys = key.split('.');
-        let value: any = translations[language];
-        for (const k of keys) {
-            value = value?.[k];
+        const resolve = (source: any) => {
+            let value: any = source;
+            for (const k of keys) {
+                value = value?.[k];
+            }
+            return value;
+        };
+
+        let value: any = resolve(translations[language]);
+        if (value === undefined) {
+            value = resolve(translations.en);
         }
-        return value || key;
+        return value ?? key;
     };
 
     return (

@@ -70,17 +70,22 @@ export const Navbar = () => {
                     style={{
                         display: 'flex',
                         alignItems: 'center',
+                        gap: theme.spacing[3],
                         textDecoration: 'none',
                     }}
                 >
-                    <img
-                        src="/nexora-logo.png"
-                        alt="NEXORA"
+                    <div className="logo-badge logo-badge--navbar" style={{ backgroundImage: "url('/website-logo.png')" }} />
+                    <span
                         style={{
-                            height: '40px',
-                            width: 'auto',
+                            color: theme.colors.text.primary,
+                            fontSize: theme.typography.fontSize.xl,
+                            fontWeight: theme.typography.fontWeight.bold,
+                            letterSpacing: '0.08em',
+                            lineHeight: 1,
                         }}
-                    />
+                    >
+                        SAAEB
+                    </span>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -147,8 +152,8 @@ export const Navbar = () => {
                             to="/"
                             style={{
                                 padding: `${theme.spacing[2]} ${theme.spacing[5]}`,
-                                background: `linear-gradient(135deg, ${theme.colors.primary[500]} 0%, ${theme.colors.secondary[500]} 100%)`,
-                                color: theme.colors.text.inverse,
+                                backgroundColor: '#d2eceb',
+                                color: theme.colors.text.primary,
                                 textDecoration: 'none',
                                 fontWeight: theme.typography.fontWeight.semibold,
                                 fontSize: theme.typography.fontSize.base,
@@ -159,10 +164,12 @@ export const Navbar = () => {
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-2px)';
                                 e.currentTarget.style.boxShadow = theme.shadows.lg;
+                                e.currentTarget.style.backgroundColor = '#c3e1e0';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'translateY(0)';
                                 e.currentTarget.style.boxShadow = theme.shadows.sm;
+                                e.currentTarget.style.backgroundColor = '#d2eceb';
                             }}
                         >
                             {t('nav.getStarted')}

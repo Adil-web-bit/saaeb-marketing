@@ -20,13 +20,16 @@ export const translations = {
             badge: '🔒 Invite-Only Model - Enterprise Excellence Guaranteed',
             headline: 'Audit before you submit. Prevent before they reject.',
             subheading: 'SAAEB is the smart tech shield protecting your medical facility\'s revenue cycle. We stop financial bleeding, block partial approvals, and perfectly align your claims with the most complex insurance rules. Operating strictly on an invite-only model to guarantee the highest service standards for our partners.',
-            cta: 'Request an Invitation',
+            cta: 'Request Private Access',
             ctaDemo: 'Learn More',
             ctaNote: '✓ Enterprise-Grade Security • ✓ PDPL Compliant • ✓ 100% Saudi Data Sovereignty',
             
             // The Problem Section
             problemTitle: 'The "Insurance" Trap & Financial Bleeding',
             problemSubtitle: 'Understanding the challenges healthcare facilities face',
+            // Features header (above the 3 cards)
+            featuresTitle: 'The "Insurance" Trap & Financial Bleeding',
+            featuresSubtitle: 'Practical remedies and platform capabilities that stop revenue loss',
             
             features: [
                 {
@@ -61,16 +64,6 @@ export const translations = {
                     title: 'Clinical Review Board',
                     description: 'For highly complex cases, our integrated team of medical professionals and master coders provides a human layer of clinical review, building an unshakeable medical justification before submission.',
                 },
-                {
-                    number: '03',
-                    title: 'Advanced Technology Engine',
-                    description: 'Our AI-powered system applies CCHI rules and complex insurance logic in real-time, ensuring zero compliance gaps.',
-                },
-                {
-                    number: '04',
-                    title: 'Your Claims Pass',
-                    description: 'Your doctor treats ➔ SAAEB audits and applies CCHI rules ➔ Claims are submitted clean and approved.',
-                },
             ],
             
             // Integration Section
@@ -97,11 +90,14 @@ export const translations = {
                     avatar: '🔒',
                 },
             ],
+
+            testimonialsTitle: 'Trusted by teams around the world',
+            testimonialsSubtitle: 'Read what our customers say about their experience',
             
             // CTA Section
             ctaFinal: 'Exclusive Access for Approved Medical Facilities',
             ctaFinalSubtitle: 'To maintain operational excellence and dedicate our full resources to our current partners, access to SAAEB is granted by evaluation.',
-            ctaButton: 'Submit Access Request',
+            ctaButton: 'Request Private Access',
         },
 
         // Features Page (Security & Compliance)
@@ -148,7 +144,7 @@ export const translations = {
                     popular: true,
                 },
             ],
-            cta: 'Request Access Evaluation',
+            cta: 'Request Private Access',
         },
 
         // Auth Pages (Hidden - Invite Only)
@@ -167,7 +163,7 @@ export const translations = {
             },
             signup: {
                 title: 'Create your account',
-                subtitle: 'Join thousands of teams using NEXORA',
+                subtitle: 'Join thousands of teams using SAAEB',
                 name: 'Full Name',
                 email: 'Email',
                 password: 'Password',
@@ -233,6 +229,10 @@ export const translations = {
         // Navigation
         nav: {
             home: 'الرئيسية',
+            problem: 'المشكلة',
+            advantage: 'ميزتنا',
+            integration: 'التكامل',
+            security: 'الأمان',
             features: 'الميزات',
             pricing: 'الأسعار',
             login: 'دخول',
@@ -241,7 +241,7 @@ export const translations = {
         // Home Page
         home: {
             badge: '🎉 جديد: رؤى تعتمد على الذكاء الاصطناعي متاحة الآن',
-            headline: 'حول عملك باستخدام NEXORA',
+            headline: 'حول عملك باستخدام SAAEB',
             subheading: 'المنصة الشاملة التي تمكن الفرق من التعاون والعمل بكفاءة وتحقيق النمو بسهولة. انضم إلى آلاف الشركات التي تحول عملياتها بالفعل.',
             cta: 'ابدأ الفترة التجريبية المجانية',
             ctaDemo: 'اعرض العرض التوضيحي',
@@ -261,24 +261,19 @@ export const translations = {
             
             features: [
                 {
-                    icon: '⚡',
-                    title: 'أداء سريع البرق',
-                    description: 'استمتع بأوقات تحميل سريعة جداً وتفاعلات سلسة مدعومة بتكنولوجيا متقدمة.',
+                    icon: '⏳',
+                    title: 'فخ التأخير والتسويف',
+                    description: 'إعادة تقديم المطالبات مرات متعددة تؤخر المدفوعات. وبعد مغادرة المريض للمرفق، تفقد شركة التأمين الحافز لتسريع الدفع.',
                 },
                 {
-                    icon: '🔒',
-                    title: 'أمان على مستوى المؤسسة',
-                    description: 'تشفير على مستوى البنك والامتثال لـ SOC 2 وميزات أمان متقدمة لحماية بيانات',
+                    icon: '💸',
+                    title: 'ضغط الموافقة الجزئية',
+                    description: 'غالباً ما توافق شركات التأمين على المطالبات جزئياً، فتبتلع هوامش الربح بهدوء تحت ذريعة "الخدمات غير المبررة".',
                 },
                 {
-                    icon: '📊',
-                    title: 'تحليلات متقدمة',
-                    description: 'اتخذ قرارات تعتمد على البيانات بفضل الرؤى الفورية ولوحات التقارير الشاملة.',
-                },
-                {
-                    icon: '🔗',
-                    title: 'تكاملات سلسة',
-                    description: 'ربط مع أكثر من 100 أداة وخدمة من خلال نظام التكامل الشامل.',
+                    icon: '🩸',
+                    title: 'النزيف الصامت',
+                    description: 'الخوف من الرفض يدفع فريق الفوترة إلى تقليل ترميز الإجراءات المعقدة، مما يؤدي إلى فقدان مبالغ كبيرة من الإيرادات المستحقة.',
                 },
             ],
             
@@ -297,16 +292,6 @@ export const translations = {
                     title: 'تخصيص مساحة العمل الخاصة بك',
                     description: 'أنشئ فريقك وعرّف التفضيلات وادمج أدواتك المفضلة بسهولة.',
                 },
-                {
-                    number: '03',
-                    title: 'ابدأ التعاون',
-                    description: 'قم بدعوة أعضاء الفريق والعمل معاً في الوقت الفعلي بميزات تعاون قوية.',
-                },
-                {
-                    number: '04',
-                    title: 'النمو بثقة',
-                    description: 'طوّر عملك بدون حدود. تتسع منصتنا بسلاسة مع تطور احتياجاتك.',
-                },
             ],
             
             // Testimonials
@@ -315,28 +300,31 @@ export const translations = {
             
             testimonials: [
                 {
-                    quote: 'غيّرت NEXORA طريقة تعاون فريقنا. لقد شهدنا زيادة بنسبة 40% في الإنتاجية منذ الانتقال إليها.',
-                    author: 'سارة جونسون',
-                    role: 'الرئيس التنفيذي، TechStart Inc.',
-                    avatar: 'SJ',
+                    variant: 'integration',
+                    quote: 'الوصول السريع: ابدأ فوراً عبر تزويدنا بحساب مستخدم مخصص على نظام HIS الحالي لديك. دون أي عبء تقني على فريق تقنية المعلومات لديك.',
+                    author: 'Option 1',
+                    role: 'الوصول السريع',
+                    avatar: '⚡',
                 },
                 {
-                    quote: 'أفضل استثمار قمنا به هذا العام. كان العائد على الاستثمار واضحاً في الشهر الأول من التنفيذ.',
-                    author: 'مايكل تشن',
-                    role: 'مدير التكنولوجيا، DataFlow Systems',
-                    avatar: 'MC',
+                    variant: 'integration',
+                    quote: 'تكامل API: مزامنة آلية بالكامل وفي الوقت الفعلي بين نظام HIS لدينا ومحركنا لعملية تدقيق خالية تماماً من الجهد وتصل مباشرة إلى NPHIES.',
+                    author: 'Option 2',
+                    role: 'الأتمتة الكاملة',
+                    avatar: '🔗',
                 },
                 {
-                    quote: 'بديهية وقوية وموثوقة. أصبحت NEXORA جزءاً لا غنى عنه من سير عملنا اليومي.',
-                    author: 'إميلي رودريغيز',
-                    role: 'مدير المنتج، CloudScale',
-                    avatar: 'ER',
+                    variant: 'security',
+                    quote: 'بنية تحتية مستضافة بالكامل في السعودية تضمن عدم مغادرة بيانات مرضاك للمملكة. تشفير بمستوى البنوك مع سيادة كاملة على البيانات.',
+                    author: 'Security First',
+                    role: 'استضافة محلية للبيانات',
+                    avatar: '🔒',
                 },
             ],
             
             // CTA Section
             ctaFinal: 'هل أنت مستعد لتحويل عملك؟',
-            ctaFinalSubtitle: 'انضم إلى آلاف الفرق التي تستخدم NEXORA بالفعل لتسريع نموها.',
+            ctaFinalSubtitle: 'انضم إلى آلاف الفرق التي تستخدم SAAEB بالفعل لتسريع نموها.',
             ctaButton: 'ابدأ فترتك التجريبية المجانية',
         },
 
@@ -431,7 +419,7 @@ export const translations = {
             },
             signup: {
                 title: 'إنشاء حسابك',
-                subtitle: 'انضم إلى آلاف الفرق التي تستخدم NEXORA',
+                subtitle: 'انضم إلى آلاف الفرق التي تستخدم SAAEB',
                 name: 'الاسم الكامل',
                 email: 'البريد الإلكتروني',
                 password: 'كلمة المرور',

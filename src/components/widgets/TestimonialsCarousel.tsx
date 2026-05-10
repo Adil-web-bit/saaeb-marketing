@@ -4,11 +4,12 @@ import { tilt3D, slideInFromRight, slideOutToLeft, carouselDot } from '../../uti
 import { useTheme } from '../../contexts/ThemeContext';
 
 interface Testimonial {
-    id: number;
+    id?: number;
     quote: string;
     author: string;
     role: string;
     avatar: string;
+    variant?: 'integration' | 'security' | 'testimonial';
 }
 
 interface TestimonialsCarouselProps {
@@ -38,7 +39,20 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
         setCurrent((prev) => (prev + newDirection + testimonials.length) % testimonials.length);
     };
 
-    const testimonial = testimonials[current];
+    const testimonial = testimonials?.[current];
+
+    // Prevent rendering if no testimonials available
+    if (!testimonials || testimonials.length === 0 || !testimonial) {
+        return (
+            <div style={{ 
+                padding: theme.spacing[8], 
+                textAlign: 'center',
+                color: theme.colors.text.secondary,
+            }}>
+                No testimonials available
+            </div>
+        );
+    }
 
     return (
         <div style={{ position: 'relative', width: '100%' }}>
@@ -84,7 +98,7 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
                                 minHeight: '80px',
                             }}
                         >
-                            {testimonial.quote}
+                            {testimonial?.quote}
                         </p>
 
                         {/* Author Info */}
@@ -130,6 +144,7 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
             </div>
 
             {/* Navigation Dots */}
+            {testimonials && testimonials.length > 0 && (
             <div
                 style={{
                     display: 'flex',
@@ -162,6 +177,7 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
                     />
                 ))}
             </div>
+            )}
 
             {/* Arrow Navigation (optional for desktop) */}
             <div
