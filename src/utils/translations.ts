@@ -98,7 +98,7 @@ export const translations = {
             // CTA Section
             ctaFinal: 'Exclusive Access for Approved Medical Facilities',
             ctaFinalSubtitle: 'To maintain operational excellence and dedicate our full resources to our current partners, access to SAAEB is granted by evaluation.',
-            ctaButton: 'Request Private Access',
+            ctaButton: 'Book a Free Denial Audit',
         },
 
         // Features Page (Security & Compliance)
