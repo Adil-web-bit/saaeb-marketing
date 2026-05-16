@@ -215,7 +215,7 @@ export const HomePage = () => {
                         </p>
 
                         {/* Trust logos row */}
-                        <div style={{ display: 'flex', gap: theme.spacing[4], justifyContent: 'center', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', gap: theme.spacing[4], justifyContent: 'center', alignItems: 'center', padding: `0 ${theme.spacing[4]}`, flexWrap: 'wrap' }}>
                             <img src="/logos/sdaia.svg" alt="SDAIA" style={{ height: 28, opacity: 0.95 }} />
                             <img src="/logos/nphies.svg" alt="NPHIES" style={{ height: 28, opacity: 0.95 }} />
                             <img src="/logos/cchi.svg" alt="CCHI" style={{ height: 28, opacity: 0.95 }} />
