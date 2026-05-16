@@ -23,10 +23,9 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-    // Get initial theme from localStorage or default to light
+    // Force dark mode by default (client requested permanent dark)
     const getInitialTheme = (): ThemeMode => {
-        const savedTheme = localStorage.getItem('nexora-theme');
-        return (savedTheme as ThemeMode) || 'light';
+        return 'dark';
     };
 
     const [mode, setMode] = useState<ThemeMode>(getInitialTheme);

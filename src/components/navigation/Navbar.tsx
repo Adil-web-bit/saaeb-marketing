@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { ThemeToggle, LanguageToggle } from '../theme';
+import { LanguageToggle } from '../theme';
 
 export const Navbar = () => {
     const { theme } = useTheme();
@@ -139,9 +139,6 @@ export const Navbar = () => {
                             </Link>
                         ))}
                     </div>
-
-                    {/* Theme Toggle */}
-                    <ThemeToggle />
 
                     {/* Language Toggle */}
                     <LanguageToggle />
@@ -275,7 +272,7 @@ export const Navbar = () => {
                                 {t('nav.getStarted')}
                             </Link>
 
-                            {/* Theme and Language Toggles */}
+                            {/* Language Toggle */}
                             <div
                                 style={{
                                     display: 'flex',
@@ -285,7 +282,6 @@ export const Navbar = () => {
                                     borderTop: `1px solid ${theme.colors.neutral[200]}`,
                                 }}
                             >
-                                <ThemeToggle />
                                 <LanguageToggle />
                             </div>
                         </div>

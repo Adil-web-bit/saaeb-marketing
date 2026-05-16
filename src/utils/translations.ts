@@ -13,16 +13,16 @@ export const translations = {
             integration: 'Integration',
             security: 'Security',
             pricing: 'Pricing',
-            getStarted: 'Request Private Access',
+            getStarted: 'Book a Free Denial Audit',
         },
         // Home Page
         home: {
             badge: '🔒 Invite-Only Model - Enterprise Excellence Guaranteed',
             headline: 'Audit before you submit. Prevent before they reject.',
             subheading: 'SAAEB is the smart tech shield protecting your medical facility\'s revenue cycle. We stop financial bleeding, block partial approvals, and perfectly align your claims with the most complex insurance rules. Operating strictly on an invite-only model to guarantee the highest service standards for our partners.',
-            cta: 'Request Private Access',
+            cta: 'Book a Free Denial Audit',
             ctaDemo: 'Learn More',
-            ctaNote: '✓ Enterprise-Grade Security • ✓ PDPL Compliant • ✓ 100% Saudi Data Sovereignty',
+            ctaNote: 'Enterprise-Grade Security | PDPL Compliant | SDAIA Aligned | NPHIES Ready',
             
             // The Problem Section
             problemTitle: 'The "Insurance" Trap & Financial Bleeding',
@@ -63,6 +63,7 @@ export const translations = {
                     number: '02',
                     title: 'Clinical Review Board',
                     description: 'For highly complex cases, our integrated team of medical professionals and master coders provides a human layer of clinical review, building an unshakeable medical justification before submission.',
+                    note: 'Clinically Supervised AI.',
                 },
             ],
             
@@ -140,11 +141,12 @@ export const translations = {
                         'No hidden charges',
                         'Full transparency',
                         'Direct alignment with your success',
+                        'Full-Cycle AI Automation: From smart clinical auditing to final cash collection.',
                     ],
                     popular: true,
                 },
             ],
-            cta: 'Request Private Access',
+            cta: 'Book a Free Denial Audit',
         },
 
         // Auth Pages (Hidden - Invite Only)
@@ -236,16 +238,16 @@ export const translations = {
             features: 'الميزات',
             pricing: 'الأسعار',
             login: 'دخول',
-            getStarted: 'ابدأ الآن',
+            getStarted: 'احجز تدقيق رفض مجاني',
         },
         // Home Page
         home: {
             badge: '🎉 جديد: رؤى تعتمد على الذكاء الاصطناعي متاحة الآن',
             headline: 'حول عملك باستخدام SAAEB',
             subheading: 'المنصة الشاملة التي تمكن الفرق من التعاون والعمل بكفاءة وتحقيق النمو بسهولة. انضم إلى آلاف الشركات التي تحول عملياتها بالفعل.',
-            cta: 'ابدأ الفترة التجريبية المجانية',
+            cta: 'احجز تدقيق رفض مجاني',
             ctaDemo: 'اعرض العرض التوضيحي',
-            ctaNote: '✓ لا توجد بطاقة ائتمان مطلوبة • ✓ فترة تجريبية لمدة 14 يوماً • ✓ الإلغاء في أي وقت',
+            ctaNote: 'أمان على مستوى المؤسسة | متوافق مع PDPL | متوافق مع SDAIA | جاهز لـ NPHIES',
             
             // Stats
             stats: {
@@ -291,6 +293,7 @@ export const translations = {
                     number: '02',
                     title: 'تخصيص مساحة العمل الخاصة بك',
                     description: 'أنشئ فريقك وعرّف التفضيلات وادمج أدواتك المفضلة بسهولة.',
+                    note: 'الذكاء الاصطناعي تحت إشراف سريري.',
                 },
             ],
             
@@ -368,11 +371,12 @@ export const translations = {
                         'بدون رسوم خفية',
                         'شفافية كاملة',
                         'توافق مباشر مع نجاحك',
+                        'أتمتة شاملة بدعم الذكاء الاصطناعي: من التدقيق السريري الذكي إلى التحصيل النهائي للنقد.',
                     ],
                     popular: true,
                 },
             ],
-            cta: 'اطلب وصولاً خاصاً',
+            cta: 'احجز تدقيق رفض مجاني',
         },
 
         // Auth Pages

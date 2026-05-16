@@ -174,7 +174,7 @@ export const PricingPage = () => {
                                         transition: `all ${theme.transitions.duration.base}`,
                                     }}
                                 >
-                                    Request Private Access
+                                    {t('pricing.cta')}
                                 </Link>
                             </motion.div>
                         ))}

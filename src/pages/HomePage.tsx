@@ -213,6 +213,14 @@ export const HomePage = () => {
                         >
                             {t('home.ctaNote')}
                         </p>
+
+                        {/* Trust logos row */}
+                        <div style={{ display: 'flex', gap: theme.spacing[4], justifyContent: 'center', alignItems: 'center' }}>
+                            <img src="/logos/sdaia.svg" alt="SDAIA" style={{ height: 28, opacity: 0.95 }} />
+                            <img src="/logos/nphies.svg" alt="NPHIES" style={{ height: 28, opacity: 0.95 }} />
+                            <img src="/logos/cchi.svg" alt="CCHI" style={{ height: 28, opacity: 0.95 }} />
+                            <img src="/logos/pdpl.svg" alt="PDPL" style={{ height: 28, opacity: 0.95 }} />
+                        </div>
                     </div>
                 </div>
 
@@ -319,6 +327,7 @@ export const HomePage = () => {
                                 >
                                     {feature.description}
                                 </p>
+                                
                             </motion.div>
                         ))}
                     </motion.div>
@@ -436,6 +445,11 @@ export const HomePage = () => {
                                 >
                                     {step.description}
                                 </p>
+                                {step.note && (
+                                    <p style={{ marginTop: theme.spacing[4] }}>
+                                        <strong style={{ color: theme.colors.text.primary }}>{step.note}</strong>
+                                    </p>
+                                )}
                             </motion.div>
                         ))}
                     </motion.div>
